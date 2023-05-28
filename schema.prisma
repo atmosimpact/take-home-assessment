@@ -7,29 +7,20 @@ generator client {
     provider = "prisma-client-js"
 }
 
-// ==================== EXAMPLES (DELETE BEFORE SUBMITTING) ====================
-model User {
-    id        Int      @id @default(autoincrement())
-    createdAt DateTime @default(now())
-    email     String   @unique
-    name      String?
-    role      Role     @default(USER)
-    posts     Post[]
+model question {
+  id                Int         @required
+  title             String      @required
+  description       String      @required
+  choices           String[]
+  modals            JSON
+  type              String      @required
 }
 
-model Post {
-    id        Int      @id @default(autoincrement())
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-    published Boolean  @default(false)
-    title     String   @db.VarChar(255)
-    author    User?    @relation(fields: [authorId], references: [id])
-    authorId  Int?
-}
-
-enum Role {
-    USER
-    ADMIN
+model response {
+  id                Int         @id @default(autoincrement())
+  title             String      @required
+  user              String      @required
+  result            Boolean     @required
 }
 
 // =============================================================================

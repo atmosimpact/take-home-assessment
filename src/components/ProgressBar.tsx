@@ -8,7 +8,7 @@ function ProgressBar({ current, max }: ProgressBarProps) {
   const valueAsPercentage = `${value}%`
 
   return (
-    <div className="absolute inset-x-0 top-0 h-3">
+    <div className="absolute inset-x-0 top-0 h-3 animate-pulse">
       <div className="h-full bg-primary-600" style={{ width: valueAsPercentage }} />
     </div>
   )

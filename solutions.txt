@@ -1,0 +1,30 @@
+Animate the progress bar without adding new dependencies (using TailwindCSS is preferred).
+    I added a small line of text to line 11 of ProgressBar.tsx to make the Progression Flicker
+
+Debounce the save() function in the App component to avoid unnecessary re-renders and API calls. (Avoid adding a new dependency if possible.)
+    I changed the array on line 46 of App.tsx to an empty arra so that the array will save once upon entering the site
+    I then applied onClick to the 'Save and exit' button and the next button to only save in those instances. 
+
+Implement a multiple question type allowing multiple fields of varying types on one Question component.
+    Lines 16-26 on Questions.tsx show the two solutions I came up with
+    I explained in notes that I was confuseed by the Question
+
+Implement a conditional-sequence feature that sets the next question based on current responses. (Don't worry if you can't finish this one—we're interested in your thought process!)
+    My thought process was that the best way to  implement a conditional sequence was to utilize answers that are included in the questions database
+    However, there were no answers in the database, so I added them myself and compared the users answer with the database answer, and direct them to the next question or to  
+    the start of the questions depending on if it is correct or not. 
+
+Add a PercentageField component for inputting percentage values. Validate input (0-100) using Formik and Yup (optional).
+    I struggled to add a percentagefield using Formik and Yup. I was not familar with these frameworks, did a little research, and got tangled in the process.
+    You can view my attempt in PercentageField.jsx
+
+Improve the project's test coverage. (Bonus points for fixing any bugs you find!)
+    Scoured for bugs and incosistencies and only found the annoying JSON on the lower end of the screen which I know users would not like to see.
+    Also utilized a few console logs to get my solution solid!
+
+I thought it would be important to take into consideration my lack of experience in Typescrpit, Prisma, and TailwindCSS. I researched and learned new things thanks to this assessment.
+It was a pleasure and I hope to hear from Atmos soon!
+
+Thank you for the oppurutunity,
+
+Darrius Brown

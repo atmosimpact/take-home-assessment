@@ -5,14 +5,29 @@ import TextField from './fields/TextField'
 import ChoiceField from './fields/ChoiceField'
 import { QuestionProps } from '../types'
 import BooleanField from './fields/BooleanField'
+import AnyField from './fields/AnyField'
+import PercentageField from './fields/PercentageField'
 
 function Question({
   question, onChange,
 }: QuestionProps) {
   const renderField = (type: string) => {
     switch (type) {
+      // I was confused by the wording of the question for multiple fields, So I provided 2 solutions
+      // Solution 1
+      // case 'multiple':
+      //   return <div className='multiple-field'>
+      //     <TextField name={question.id.toString()} onChange={onChange} />
+      //     <NumberField name={question.id.toString()} onChange={onChange} />
+      //     <BooleanField name={question.id.toString()} onChange={onChange} />
+      //   </div>
+      // Solution 2 (New component called Anyfield Added to fields directory)
+      // case 'multiple':
+      //   return <AnyField name={question.id.toString()} onChange={onChange} />
       case 'text':
         return <TextField name={question.id.toString()} onChange={onChange} />
+      // case 'percentage':
+      //     return <PercentageField name={question.id.toString()} onChange={onChange} />
       case 'number':
         return <NumberField name={question.id.toString()} onChange={onChange} />
       case 'boolean':
